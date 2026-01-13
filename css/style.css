@@ -1,5 +1,5 @@
 /* =========================
-   Global Reset
+   GLOBAL
 ========================= */
 * {
   margin: 0;
@@ -7,9 +7,10 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   Base Styles
-========================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   background-color: #0b1220;
@@ -18,65 +19,84 @@ body {
 }
 
 /* =========================
-   HERO SECTION (Brochure feel)
+   TOP BAR
+========================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #020617;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #0f172a;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+   HERO
 ========================= */
 .hero {
   min-height: 90vh;
-  padding: 80px 24px;
+  padding: 100px 24px;
+  text-align: center;
   background:
     radial-gradient(circle at top right, rgba(56,189,248,0.15), transparent 40%),
     linear-gradient(180deg, #020617, #0b1220);
-  text-align: center;
 }
 
 .hero h1 {
   font-size: 4rem;
-  font-weight: 800;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #e0f2fe;
 }
 
-.hero p {
-  margin-top: 14px;
+.subtitle {
+  margin-top: 16px;
   font-size: 1.2rem;
   color: #94a3b8;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* =========================
-   Navigation
-========================= */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-top: 48px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: #e5e7eb;
+.date {
+  margin-top: 20px;
   font-weight: 500;
-  letter-spacing: 1px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid transparent;
-}
-
-nav a:hover {
-  border-color: #38bdf8;
-  color: #38bdf8;
 }
 
 /* =========================
-   MAIN CONTENT (Readable)
+   CONTENT
 ========================= */
 .content {
-  background-color: #f8fafc;
+  background: #f8fafc;
   color: #0f172a;
   padding: 80px 24px;
 }
@@ -90,145 +110,89 @@ section {
 section h2 {
   font-size: 2.2rem;
   margin-bottom: 16px;
-  color: #020617;
-  position: relative;
 }
 
 section h2::after {
   content: "";
+  display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #38bdf8);
-  display: block;
   margin-top: 10px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
 }
 
-section p {
-  font-size: 1.05rem;
+section p, section li {
   color: #334155;
+  font-size: 1.05rem;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section li {
+  margin-bottom: 10px;
 }
 
 /* =========================
-   CTA Buttons
+   CTA
 ========================= */
-section a {
+.cta {
   display: inline-block;
   margin-top: 24px;
-  padding: 12px 28px;
+  padding: 12px 32px;
+  border-radius: 30px;
   background: linear-gradient(135deg, #2563eb, #38bdf8);
   color: white;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 30px;
-  letter-spacing: 0.5px;
-}
-
-section a:hover {
-  opacity: 0.9;
 }
 
 /* =========================
-   Footer (Return to dark)
+   FOOTER
 ========================= */
 footer {
-  background-color: #020617;
+  background: #020617;
   color: #94a3b8;
   text-align: center;
   padding: 40px 24px;
-  font-size: 0.95rem;
-}
-
-footer p {
-  margin-top: 10px;
 }
 
 /* =========================
-   Responsive
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.8rem;
+
+  .menu-toggle {
+    display: block;
   }
 
-  nav ul {
-    gap: 16px;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-  }
-}
-/* =========================
-   MOBILE POLISHING
-========================= */
-@media (max-width: 600px) {
-
-  /* ---- Hero Section ---- */
-  .hero {
-    min-height: auto;
-    padding: 64px 20px 48px;
-  }
-
-  .hero h1 {
-    font-size: 2.4rem;
-    letter-spacing: 2px;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* ---- Navigation ---- */
-  nav ul {
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #020617;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    margin-top: 32px;
+    padding: 24px 0;
+    display: none;
   }
 
-  nav a {
-    font-size: 0.95rem;
+  .nav-menu.active {
+    display: flex;
   }
 
-  /* ---- Main Content ---- */
-  .content {
-    padding: 56px 20px;
-  }
-
-  section {
-    margin-bottom: 56px;
+  .hero h1 {
+    font-size: 2.6rem;
   }
 
   section h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
-  section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  /* ---- Lists (Symposium section) ---- */
-  section ul {
-    padding-left: 18px;
-  }
-
-  section li {
-    margin-bottom: 8px;
-  }
-
-  /* ---- CTA Button ---- */
-  section a {
+  .cta {
     width: 100%;
     text-align: center;
-    padding: 14px 0;
-    font-size: 1rem;
-  }
-
-  /* ---- Footer ---- */
-  footer {
-    padding: 32px 20px;
-    font-size: 0.9rem;
   }
 }
