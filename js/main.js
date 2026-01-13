@@ -1,13 +1,33 @@
-const toggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".nav-menu");
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+  // Create overlay dynamically (no HTML edits)
+  const overlay = document.createElement("div");
+  overlay.className = "menu-overlay";
+  document.body.appendChild(overlay);
 
-/* Close menu on link click (mobile UX polish) */
-document.querySelectorAll(".nav-menu a").forEach(link => {
-  link.addEventListener("click", () => {
+  function openMenu() {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+  }
+
+  function closeMenu() {
     menu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  toggle.addEventListener("click", () => {
+    menu.classList.contains("active") ? closeMenu() : openMenu();
   });
-});
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeMenu();
+  });
+</script>
