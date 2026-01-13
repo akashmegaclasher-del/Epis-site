@@ -39,7 +39,7 @@ body {
 }
 
 .menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
   color: white;
@@ -48,7 +48,7 @@ body {
 }
 
 .nav-menu {
-  display: flex;
+  display: none;
   gap: 24px;
 }
 
