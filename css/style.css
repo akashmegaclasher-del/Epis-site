@@ -1,1 +1,144 @@
-/*styles will go here*/
+/* --------------------
+   Global Reset
+-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------
+   Base Typography
+-------------------- */
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* --------------------
+   Layout Containers
+-------------------- */
+header,
+main,
+footer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* --------------------
+   Header & Branding
+-------------------- */
+header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  margin-top: 6px;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+/* --------------------
+   Navigation
+-------------------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* --------------------
+   Main Content
+-------------------- */
+main {
+  padding-top: 40px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #020617;
+}
+
+section p {
+  max-width: 750px;
+  color: #334155;
+}
+
+/* --------------------
+   Call-to-Action Links
+-------------------- */
+section a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+section a:hover {
+  background-color: #1e40af;
+}
+
+/* --------------------
+   Footer
+-------------------- */
+footer {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 60px;
+  text-align: center;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin-top: 8px;
+}
+
+/* --------------------
+   Responsive Design
+-------------------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.1rem;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
