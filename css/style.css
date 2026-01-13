@@ -52,6 +52,11 @@ body {
   gap: 24px;
 }
 
+.nav-menu.active {
+   display: flex;
+   flex-direction: column;
+}
+
 .nav-menu a {
   color: #e5e7eb;
   text-decoration: none;
