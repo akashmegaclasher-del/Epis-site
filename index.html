@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <meta charset="UTF-8">
   <title>Episteme 2026 | AIIMS Deoghar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/event.css">
 </head>
 
 <body>
@@ -15,7 +20,10 @@
      STICKY TOP BAR
 ========================= -->
 <header class="topbar">
-  <div class="brand">Episteme 2026</div>
+  <div class="brand">
+    <img src="assets/logo.png" alt="Episteme 2026 Logo" class="brand-logo">
+    <span class="brand-text">Episteme 2026</span>
+  </div>
 
   <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
 
@@ -23,9 +31,13 @@
     <a href="#intro">Home</a>
     <a href="#about">About</a>
     <a href="#theme">Theme</a>
-    <a href="#symposium">Symposium</a>
+    <a href="participation">Participation</a>
+    <a href="#events">Events</a>
     <a href="#timeline">Timeline</a>
-    <a href="#register">Register</a>
+   <a href="assets/EPISTEME-provisional brochure.pdf" target="_blank" rel="noopener noreferrer">
+  Brochure
+</a>
+    <a href="#contact us">Contact Us</a>
   </nav>
 </header>
 
@@ -33,12 +45,26 @@
      HERO / INTRO
 ========================= -->
 <section id="intro" class="hero">
-  <h1>Episteme 2026</h1>
-  <p class="subtitle">
-    First Academic Fest of<br>
-    All India Institute of Medical Sciences, Deoghar
-  </p>
-  <p class="date">24<sup>th</sup> – 25<sup>th</sup> February 2026</p>
+  <div class="hero-inner">
+
+    <h1>Episteme</h1>
+    <h1>2026</h1>
+    <p class="subtitle">
+      Scientific & Academic Fest<br>
+      All India Institute of Medical Sciences, Deoghar
+    </p>
+    <p class="date">24<sup>th</sup> – 25<sup>th</sup> February 2026</p>
+    <div class="countdown" id="countdown">
+      <span class="countdown-label">Begins T−</span>
+      <span class="countdown-time">
+        <span id="cd-days">00</span> days :
+        <span id="cd-hours">00</span> hours :
+        <span id="cd-minutes">00</span> minutes :
+        <span id="cd-seconds">00</span> seconds
+      </span>
+    </div>
+
+  </div>
 </section>
 
 <!-- =========================
@@ -64,35 +90,85 @@
     </p>
   </section>
 
-  <section id="symposium">
-    <h2>Symposium</h2>
-    <ul>
-      <li><strong>MEDISCOPE</strong> – Clinical Case Presentation</li>
-      <li><strong>CONCEPTUM</strong> – Research Idea Presentation</li>
-      <li><strong>SCHOLARIUM</strong> – Research Paper Presentation</li>
-      <li><strong>PROTOMED</strong> – Medical Model Presentation</li>
-      <li><strong>CLINOVATE</strong> – Hands-on Workshops</li>
-    </ul>
+  <section id="participation">
+    <h2>Participation</h2>
+    <p>
+      <strong>Open to all undergraduate medical students, nursing, paramedical, and public health students from AIIMS Deoghar.</strong><br><br>
+      Showcase your research ideas, clinical case presentations, research papers  and medical
+      models to a panel of esteemed judges and peers.
+    </p>
   </section>
+
+  <section id="events">
+  <h2>Events</h2>
+  <ul>
+    <li>
+      <a href="events/mediscope.html">
+        <strong>MEDISCOPE</strong> – Clinical Case Presentation
+      </a>
+    </li>
+
+    <li>
+      <a href="events/conceptum.html">
+        <strong>CONCEPTUM</strong> – Research Idea Presentation
+      </a>
+    </li>
+
+    <li>
+      <a href="events/scholarium.html">
+        <strong>SCHOLARIUM</strong> – Research Paper Presentation
+      </a>
+    </li>
+
+    <li>
+      <a href="events/protomed.html">
+        <strong>PROTO-MED</strong> – Medical Model Presentation
+      </a>
+    </li>
+
+    <li>
+      <a href="events/clinovate.html">
+        <strong>CLINOVATE</strong> – Hands-on Workshops
+      </a>
+    </li>
+  </ul>
+</section>
 
   <section id="timeline">
     <h2>Timeline</h2>
     <p>
-      <strong>16 Jan</strong> – Registration opens<br>
-      <strong>12 Feb</strong> – Submission deadline<br>
-      <strong>12–15 Feb</strong> – Faculty review<br>
-      <strong>16 Feb</strong> – Shortlist declaration<br>
-      <strong>24–25 Feb</strong> – On-campus Episteme 2026
+      <strong>16th Jan</strong> – Registration opens<br>
+      <strong>12th Feb</strong> – Submission deadline<br>
+      <strong>12th to 15th Feb</strong> – Faculty review<br>
+      <strong>16th Feb</strong> – Shortlist declaration<br>
+      <strong>24th to 25th Feb</strong> – On-campus Episteme 2026
     </p>
   </section>
 
-  <section id="register">
-    <h2>Participate</h2>
-    <p>
-      Undergraduate medical, nursing, paramedical, and public health students are
-      invited to take part in Episteme 2026.
-    </p>
-    <a href="register.html" class="cta">Register Now</a>
+  <section id="contact-us">
+    <h2>Contact Us</h2>
+    
+    <div class="contact-buttons">
+  <a href="mailto:episteme@aiimsdeoghar.edu.in"
+     class="contact-btn email"
+     aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="https://instagram.com/YOUR_HANDLE"
+     target="_blank"
+     class="contact-btn instagram"
+     aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://wa.me/91XXXXXXXXXX"
+     target="_blank"
+     class="contact-btn whatsapp"
+     aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
   </section>
 
 </main>
